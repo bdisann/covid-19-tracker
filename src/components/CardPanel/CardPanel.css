@@ -1,0 +1,41 @@
+.cardPanel {
+  min-width: 200px;
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  border: 1px solid lightgray;
+  margin: 5px 25px;
+  align-items: center;
+  justify-content: space-evenly;
+  border-radius: 20px;
+  background-color: white;
+  box-shadow: 0px 7px 15px -10px rgba(0, 0, 0, 0.6);
+}
+
+.cardPanel__title {
+  font-size: 24px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-self: self-start;
+  margin-bottom: 15px;
+  color: rgb(88, 88, 88);
+}
+
+.cardPanel__cases {
+  font-weight: bold;
+  font-size: 27px;
+}
+
+.cardPanel__casesToday {
+  color: red;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.cardPanel__textTotal {
+  font-size: 16px;
+  font-weight: 700;
+  color: rgb(88, 88, 88);
+}

@@ -1,0 +1,16 @@
+.panelInfo {
+  height: 350px;
+  width: 100%;
+  overflow: scroll;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  white-space: nowrap;
+  margin-top: 40px;
+}
+
+@media screen and (max-width: 868px) {
+  .panelInfo {
+    justify-content: flex-start;
+  }
+}

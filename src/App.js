@@ -1,8 +1,41 @@
-import logo from "./logo.svg";
+import { connect } from "react-redux";
+import { Route, Switch } from "react-router";
 import "./App.css";
+import HomePage from "./pages/HomePage/HomePage";
+import api from "./axios/api";
+import { useEffect } from "react";
+import {
+  setAllCountries,
+  setLocationTable,
+} from "./redux/location/locationAction";
 
-function App() {
-  return <div className="app"></div>;
+function App({ setAllCountries, setLocationTable }) {
+  useEffect(() => {
+    const getAllCountriesData = async () => {
+      const callApi = await api.get("countries").then(({ data }) => {
+        const countriesData = data.map((country) => ({
+          name: country.country,
+          value: country.countryInfo.iso3,
+          flag: country.countryInfo.flag,
+        }));
+        return { countriesData: countriesData, data: data };
+      });
+      setLocationTable(callApi.data);
+      setAllCountries(callApi.countriesData);
+    };
+    getAllCountriesData();
+  }, [setAllCountries, setLocationTable]);
+
+  return (
+    <div className="app">
+      <Switch>
+        <Route path="/" exact component={HomePage} />
+      </Switch>
+    </div>
+  );
 }
-
-export default App;
+const mapDispatchToProps = (dispatch) => ({
+  setAllCountries: (countries) => dispatch(setAllCountries(countries)),
+  setLocationTable: (data) => dispatch(setLocationTable(data)),
+});
+export default connect(null, mapDispatchToProps)(App);
