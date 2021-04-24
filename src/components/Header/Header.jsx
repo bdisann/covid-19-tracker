@@ -1,9 +1,14 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./Header.css";
 import { Link } from "react-router-dom";
 
 const Header = ({ handleSubmit, countries, country }) => {
-  const [countryInput, setCountryInput] = useState("");
+  const [countryInput, setCountryInput] = useState(country);
+
+  useEffect(() => {
+    setCountryInput(country);
+  }, [country]);
+
   return (
     <div className="header">
       <div className="headerContainer">
@@ -25,7 +30,7 @@ const Header = ({ handleSubmit, countries, country }) => {
               list="countries"
               //   defaultValue={country}
               onChange={(e) => setCountryInput(e.target.value)}
-              defaultValue={country}
+              value={countryInput}
             />
 
             <button>Search</button>

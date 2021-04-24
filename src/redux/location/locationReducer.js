@@ -4,6 +4,7 @@ const INITIAL_STATE = {
   countries: [],
   country: "Worldwide",
   dataTable: [],
+  dataGraph: [],
 };
 
 const locationReducer = (state = INITIAL_STATE, action) => {
@@ -22,6 +23,12 @@ const locationReducer = (state = INITIAL_STATE, action) => {
       return {
         ...state,
         dataTable: action.payload,
+      };
+
+    case LocationTypes.SET_LOCATION_DATA_GRAPH:
+      return {
+        ...state,
+        dataGraph: action.payload,
       };
     default:
       return state;

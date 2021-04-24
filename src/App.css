@@ -1,5 +1,6 @@
 .app {
   width: 100vw;
-  height: 1100px;
+  height: 2200px;
+  padding-bottom: 20px;
   background-color: #f5f5fb;
 }

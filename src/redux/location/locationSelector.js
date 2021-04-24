@@ -16,3 +16,8 @@ export const selectDataTable = createSelector(
   [selectLocation],
   (location) => location.dataTable
 );
+
+export const selectDataGraph = createSelector(
+  [selectLocation],
+  (location) => location.dataGraph
+);

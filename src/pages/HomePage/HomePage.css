@@ -9,6 +9,11 @@
   width: 100%;
   height: 100%;
 }
+.homePage__body > h2 {
+  text-align: center;
+  margin-top: 120px;
+  margin-bottom: -50px;
+}
 
 .homePage__statPanel {
   display: flex;
@@ -40,6 +45,7 @@
   }
 
   .homePage__statPanelRight {
-    max-height: 550px;
+    height: 100%;
+    max-height: 450px;
   }
 }

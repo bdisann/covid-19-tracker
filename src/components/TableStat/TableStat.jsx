@@ -1,9 +1,10 @@
 import React from "react";
 import { connect } from "react-redux";
+import { setCountry } from "../../redux/location/locationAction";
 import { selectDataTable } from "../../redux/location/locationSelector";
 import "./TableStat.css";
 
-const TableStat = ({ dataTable }) => {
+const TableStat = ({ dataTable, setCountry }) => {
   const sortData = (data) => {
     const dataToSort = [...data];
     dataToSort.sort((a, b) => (a.cases > b.cases ? -1 : 1));
@@ -25,7 +26,14 @@ const TableStat = ({ dataTable }) => {
             {sortData(dataTable).map((data, index) => (
               <tr key={index}>
                 <td>{index + 1}</td>
-                <td>{data.country}</td>
+                <td
+                  style={{
+                    cursor: "pointer",
+                  }}
+                  onClick={(e) => setCountry(data.country)}
+                >
+                  {data.country}
+                </td>
                 <td>{data.cases}</td>
               </tr>
             ))}
@@ -39,5 +47,7 @@ const TableStat = ({ dataTable }) => {
 const mapStateToProps = (state) => ({
   dataTable: selectDataTable(state),
 });
-
-export default connect(mapStateToProps)(TableStat);
+const mapDispatchToProps = (dispatch) => ({
+  setCountry: (country) => dispatch(setCountry(country)),
+});
+export default connect(mapStateToProps, mapDispatchToProps)(TableStat);

@@ -14,3 +14,8 @@ export const setLocationTable = (data) => ({
   type: LocationTypes.SET_LOCATION_TABLE,
   payload: data,
 });
+
+export const setLocationDataGraph = (data) => ({
+  type: LocationTypes.SET_LOCATION_DATA_GRAPH,
+  payload: data,
+});

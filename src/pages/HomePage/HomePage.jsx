@@ -10,6 +10,7 @@ import {
 import Header from "../../components/Header/Header";
 import PanelInfo from "../../components/PanelInfo/PanelInfo";
 import TableStat from "../../components/TableStat/TableStat";
+import GraphPanel from "../../components/GraphPanel/GraphPanel";
 
 const HomePage = ({ countries, country, setCountry }) => {
   const handleSetCountry = (e, countryInput) => {
@@ -25,12 +26,13 @@ const HomePage = ({ countries, country, setCountry }) => {
         country={country}
       />
       <div className="homePage__body">
+        <h2>You look for {country} now.</h2>
         <PanelInfo />
 
         <div className="homePage__statPanel">
           <div className="homePage__statPanelLeft">
             <h1>Map</h1>
-            <h1>Graphp</h1>
+            <GraphPanel />
           </div>
           <div className="homePage__statPanelRight">
             <h3 className="tableStat__title">Cases by Country</h3>
