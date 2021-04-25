@@ -12,8 +12,7 @@ import PanelInfo from "../../components/PanelInfo/PanelInfo";
 import TableStat from "../../components/TableStat/TableStat";
 import GraphPanel from "../../components/GraphPanel/GraphPanel";
 import MapPanel from "../../components/MapPanel/MapPanel";
-// import MapPanel from "../../components/MapPanel/MapPanel";
-// import "leaflet/dist/leaflet.css";
+import Footer from "../../components/Footer/Footer";
 
 const HomePage = ({ countries, country, setCountry }) => {
   const handleSetCountry = (e, countryInput) => {
@@ -43,6 +42,7 @@ const HomePage = ({ countries, country, setCountry }) => {
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   );
 };

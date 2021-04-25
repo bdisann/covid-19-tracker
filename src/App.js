@@ -8,6 +8,7 @@ import {
   setAllCountries,
   setLocationTable,
 } from "./redux/location/locationAction";
+import InformationPage from "./pages/InformationPage/InformationPage";
 
 function App({ setAllCountries, setLocationTable }) {
   useEffect(() => {
@@ -30,6 +31,7 @@ function App({ setAllCountries, setLocationTable }) {
     <div className="app">
       <Switch>
         <Route path="/" exact component={HomePage} />
+        <Route path="/information" exact component={InformationPage} />
       </Switch>
     </div>
   );
