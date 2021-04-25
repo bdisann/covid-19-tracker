@@ -13,17 +13,20 @@
   text-align: center;
   margin-top: 120px;
   margin-bottom: -50px;
+  color: white;
 }
 
 .homePage__statPanel {
   display: flex;
   width: 100%;
-  height: 700px;
+  height: 980px;
+  padding: 0 25px;
 }
 
 .homePage__statPanelLeft {
   /* display: flex;
   flex-direction: column; */
+  height: 100%;
   flex: 0.7;
 }
 
@@ -42,10 +45,19 @@
 @media screen and (max-width: 968px) {
   .homePage__statPanel {
     flex-direction: column;
+    height: 1500px;
   }
 
   .homePage__statPanelRight {
+    margin-top: 25px;
     height: 100%;
     max-height: 450px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .homePage__statPanel {
+    flex-direction: column;
+    height: 1050px;
   }
 }

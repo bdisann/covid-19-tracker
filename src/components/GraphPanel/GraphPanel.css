@@ -1,8 +1,9 @@
 .graphPanel {
-  background-color: white;
+  background-color: #ffffff;
   padding: 25px;
-  margin: 15px;
+  margin-left: 15px;
   border-radius: 25px;
+  height: 100%;
 }
 
 .graphPanel__button {
@@ -40,6 +41,9 @@
 }
 
 @media screen and (max-width: 968px) {
+  .graphPanel {
+    margin: 15px;
+  }
   .graphPanel__button {
     flex-direction: column;
   }

@@ -1,0 +1,16 @@
+.mapPanel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 80vw;
+  height: 500px;
+  margin: 75px auto -20px;
+  border-radius: 25px;
+}
+
+p {
+  margin-top: 38px;
+  color: white;
+  text-align: center;
+}

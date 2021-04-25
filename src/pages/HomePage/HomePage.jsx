@@ -11,6 +11,9 @@ import Header from "../../components/Header/Header";
 import PanelInfo from "../../components/PanelInfo/PanelInfo";
 import TableStat from "../../components/TableStat/TableStat";
 import GraphPanel from "../../components/GraphPanel/GraphPanel";
+import MapPanel from "../../components/MapPanel/MapPanel";
+// import MapPanel from "../../components/MapPanel/MapPanel";
+// import "leaflet/dist/leaflet.css";
 
 const HomePage = ({ countries, country, setCountry }) => {
   const handleSetCountry = (e, countryInput) => {
@@ -26,12 +29,12 @@ const HomePage = ({ countries, country, setCountry }) => {
         country={country}
       />
       <div className="homePage__body">
-        <h2>You look for {country} now.</h2>
+        <h2>You look for {country} now. </h2>
+        <MapPanel />
         <PanelInfo />
 
         <div className="homePage__statPanel">
           <div className="homePage__statPanelLeft">
-            <h1>Map</h1>
             <GraphPanel />
           </div>
           <div className="homePage__statPanelRight">

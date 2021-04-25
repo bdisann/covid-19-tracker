@@ -21,3 +21,8 @@ export const selectDataGraph = createSelector(
   [selectLocation],
   (location) => location.dataGraph
 );
+
+export const selectDataMap = createSelector(
+  [selectLocation],
+  (location) => location.dataTable
+);

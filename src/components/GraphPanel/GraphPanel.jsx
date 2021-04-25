@@ -87,6 +87,13 @@ const GraphPanel = ({ country, setLocationDataGraph, dataGraph }) => {
               },
             },
             scales: {
+              x: [
+                {
+                  ticks: {
+                    fontColor: "white",
+                  },
+                },
+              ],
               y: {
                 type: "linear",
                 display: true,

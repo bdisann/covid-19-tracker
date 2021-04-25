@@ -1,6 +1,12 @@
 .app {
   width: 100vw;
-  height: 2200px;
+  height: 100%;
   padding-bottom: 20px;
-  background-color: #f5f5fb;
+  background-color: #292929;
+}
+
+@media screen and (max-witdh: 968px) {
+  .app {
+    height: 5000px !important;
+  }
 }
